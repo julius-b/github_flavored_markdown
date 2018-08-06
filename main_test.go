@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/shurcooL/github_flavored_markdown"
-	"github.com/shurcooL/github_flavored_markdown/gfmstyle"
+	"github.com/gobuffalo/github_flavored_markdown"
+	"github.com/gobuffalo/github_flavored_markdown/gfmstyle"
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
 )
@@ -68,7 +68,7 @@ func TestComponents(t *testing.T) {
 		},
 		{
 			// No need to insert an empty line to start a (code, quote, ordered list, unordered list) block.
-			// See issue https://github.com/shurcooL/github_flavored_markdown/issues/9.
+			// See issue https://github.com/gobuffalo/github_flavored_markdown/issues/9.
 			text: `Some text
 - A
 - B
