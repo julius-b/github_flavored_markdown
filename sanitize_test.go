@@ -9,8 +9,8 @@ import (
 	"regexp"
 	"testing"
 
+	"github.com/gobuffalo/github_flavored_markdown/internal/russross/blackfriday"
 	"github.com/microcosm-cc/bluemonday"
-	blackfriday "gopkg.in/russross/blackfriday.v1"
 )
 
 // In this test, nothing should be sanitized away.
