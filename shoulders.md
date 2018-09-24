@@ -34,5 +34,3 @@ Thank you to the following **GIANTS**:
 * [golang.org/x/net/html](https://godoc.org/golang.org/x/net/html)
 
 * [golang.org/x/net/html/atom](https://godoc.org/golang.org/x/net/html/atom)
-
-* [gopkg.in/russross/blackfriday.v1](https://godoc.org/gopkg.in/russross/blackfriday.v1)
