@@ -26,7 +26,7 @@ func ExampleMarkdown_completeHTMLPage() {
 	// Serve the "/assets/gfm.css" file.
 	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(gfmstyle.Assets)))
 
-	var w io.Writer = os.Stdout // It can be an http.ResponseWriter.
+	var w io.Writer = os.Stdout	// It can be an http.ResponseWriter.
 	markdown := []byte("# GitHub Flavored Markdown\n\nHello.")
 
 	io.WriteString(w, `<html><head><meta charset="utf-8"><link href="/assets/gfm.css" media="all" rel="stylesheet" type="text/css" /><link href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.css" media="all" rel="stylesheet" type="text/css" /></head><body><article class="markdown-body entry-content" style="padding: 30px;">`)
@@ -42,18 +42,18 @@ func ExampleMarkdown_completeHTMLPage() {
 
 func TestComponents(t *testing.T) {
 	tests := []struct {
-		text string
-		want string
+		text	string
+		want	string
 	}{
 		{
 			// Heading.
-			text: "## git diff",
-			want: `<h2><a name="git-diff" class="anchor" href="#git-diff" rel="nofollow" aria-hidden="true"><span class="octicon octicon-link"></span></a>git diff</h2>` + "\n",
+			text:	"## git diff",
+			want:	`<h2><a name="git-diff" class="anchor" href="#git-diff" rel="nofollow" aria-hidden="true"><span class="octicon octicon-link"></span></a>git diff</h2>` + "\n",
 		},
 		{
 			// Heading Link.
-			text: "### [Some **bold** _italic_ link](http://www.example.com)",
-			want: `<h3><a name="some-bold-italic-link" class="anchor" href="#some-bold-italic-link" rel="nofollow" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.example.com" rel="nofollow">Some <strong>bold</strong> <em>italic</em> link</a></h3>` + "\n",
+			text:	"### [Some **bold** _italic_ link](http://www.example.com)",
+			want:	`<h3><a name="some-bold-italic-link" class="anchor" href="#some-bold-italic-link" rel="nofollow" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://www.example.com" rel="nofollow">Some <strong>bold</strong> <em>italic</em> link</a></h3>` + "\n",
 		},
 		{
 			// Task List.
